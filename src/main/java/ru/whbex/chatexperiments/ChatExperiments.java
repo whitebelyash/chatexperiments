@@ -16,6 +16,9 @@ public final class ChatExperiments extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        if(!getDataFolder().exists()){
+            getDataFolder().mkdir();
+        }
         this.getCommand("testplayer").setExecutor(new test());
         this.getCommand("stopplayer").setExecutor(new stop());
         instance = this;
