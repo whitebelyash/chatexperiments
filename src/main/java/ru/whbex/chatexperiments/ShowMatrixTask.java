@@ -29,7 +29,7 @@ public class ShowMatrixTask extends TimerTask {
         }
         if(counter + 1 > frames.size()){
             this.cancel();
-            viewer.sendMessage("Done, out of bounds");
+            viewer.sendMessage("Finished");
             return;
         }
         viewer.sendMessage(counter + "\n \n" + frames.get(counter));

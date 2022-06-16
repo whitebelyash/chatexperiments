@@ -14,7 +14,6 @@ public class test implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage("Starting up");
         ChatExperiments.timer = new Timer();
         ShowMatrixTask task = new ShowMatrixTask(sender, ChatExperiments.getInstance().getDataFolder().getAbsolutePath());
         Bukkit.getScheduler().runTaskAsynchronously(ChatExperiments.getInstance(), () -> {
