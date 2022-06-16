@@ -40,6 +40,7 @@ public class FrameProvider {
     private File getFileByPointer(){
         return new File(path, pointer + ".png");
     }
+    // returns frame as string
     private String getColoredLines(BufferedImage image){
         if(image == null) return "";
         int counter1 = 0;
@@ -57,6 +58,7 @@ public class FrameProvider {
             result = result + out + "\n";
         } return result;
     }
+    // returns downscaled to 24x18 bufferedimage
     private BufferedImage getImage(File file){
         BufferedImage bufImage;
         try{
@@ -90,7 +92,7 @@ public class FrameProvider {
     public String getNextFrame(CommandSender viewer){
         String frame = getNextFrame();
         if(frame.isEmpty()){
-            viewer.sendMessage(String.format("Couldn't parse %d frame", pointer));
+            viewer.sendMessage(String.format(ChatColor.RED + "Couldn't parse %d frame", pointer));
         }
         return frame;
     }
