@@ -1,0 +1,14 @@
+name: ChatExperiments
+version: '${project.version}'
+main: ru.whbex.chatexperiments.ChatExperiments
+api-version: 1.18
+prefix: ChatExp
+authors: [ whitebelyash ]
+description: Chat experiments
+commands:
+  testplayer:
+    description: plays all pngs in plugin datafolder
+    usage: /testplayer
+  stopplayer:
+    description: stop player
+    usage: /stopplayer
