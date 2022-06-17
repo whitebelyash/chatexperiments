@@ -14,12 +14,12 @@ public class test implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        ChatExperiments.timer = new Timer();
+        ChatExperiments.getInstance().setTimer(sender, new Timer());
         ShowMatrixTask task = new ShowMatrixTask(sender, ChatExperiments.getInstance().getDataFolder().getAbsolutePath());
         Bukkit.getScheduler().runTaskAsynchronously(ChatExperiments.getInstance(), () -> {
             task.parseFrames();
             sender.sendMessage("Starting player in 2500 ms");
-            ChatExperiments.timer.schedule(task, 2500L, 100L);
+            ChatExperiments.getInstance().getTimer(sender).schedule(task, 2500L, 100L);
         });
         // Done
         return true;
