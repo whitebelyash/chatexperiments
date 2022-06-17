@@ -10,11 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.TimerTask;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class FrameProvider {
     private final String path;

@@ -2,7 +2,6 @@ package ru.whbex.chatexperiments;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -14,7 +13,6 @@ import ru.whbex.chatexperiments.cmd.test;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public final class ChatExperiments extends JavaPlugin implements Listener {
     private Map<CommandSender, Timer> timers = new HashMap<>();
@@ -25,6 +23,7 @@ public final class ChatExperiments extends JavaPlugin implements Listener {
         if(!getDataFolder().exists()){
             getDataFolder().mkdir();
         }
+        Bukkit.getPluginManager().registerEvents(this, this);
         this.getCommand("testplayer").setExecutor(new test());
         this.getCommand("stopplayer").setExecutor(new stop());
         instance = this;
