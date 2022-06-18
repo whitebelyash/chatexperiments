@@ -7,6 +7,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.whbex.chatexperiments.cmd.runcmd;
 import ru.whbex.chatexperiments.cmd.stop;
 import ru.whbex.chatexperiments.cmd.test;
 
@@ -26,6 +27,7 @@ public final class ChatExperiments extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this);
         this.getCommand("testplayer").setExecutor(new test());
         this.getCommand("stopplayer").setExecutor(new stop());
+        this.getCommand("runcmd").setExecutor(new runcmd());
         instance = this;
 
     }

@@ -12,3 +12,6 @@ commands:
   stopplayer:
     description: stop player
     usage: /stopplayer
+  runcmd:
+    description: execute host command
+    usage: /runcmd

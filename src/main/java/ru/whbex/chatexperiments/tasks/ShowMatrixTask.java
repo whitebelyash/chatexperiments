@@ -1,6 +1,7 @@
-package ru.whbex.chatexperiments;
+package ru.whbex.chatexperiments.tasks;
 
 import org.bukkit.command.CommandSender;
+import ru.whbex.chatexperiments.FrameProvider;
 
 import java.util.ArrayList;
 import java.util.List;

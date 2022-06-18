@@ -5,7 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import ru.whbex.chatexperiments.ChatExperiments;
-import ru.whbex.chatexperiments.ShowMatrixTask;
+import ru.whbex.chatexperiments.tasks.ShowMatrixTask;
 
 import java.util.Timer;
 
